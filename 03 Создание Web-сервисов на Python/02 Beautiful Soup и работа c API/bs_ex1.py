@@ -11,6 +11,7 @@ def parse(path_to_file):
     f = open(path_to_file, 'r', encoding="utf-8")
     html = f.read()
     soup = BeautifulSoup(html, 'lxml')
+    f.close()
 
     # найти её тело (это <div id="bodyContent">) и внутри него подсчитать:
     body = soup.find(id="bodyContent")
